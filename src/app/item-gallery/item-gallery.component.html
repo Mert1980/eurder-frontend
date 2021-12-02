@@ -2,7 +2,16 @@
   <div class="">
     <div id="" class="">
       <div class="">
-        <div *ngFor="let item of items" class="">
+        <div class="">
+          <label for="name">Name</label>
+          <input id="name"
+                 name="name"
+                 class="form-control"
+                 placeholder="Name"
+                 [(ngModel)]="searchText"
+          >
+        </div>
+        <div *ngFor="let item of items | nameFilter : searchText" class="">
           <app-item [item]="item"></app-item>
         </div>
       </div>

@@ -10,8 +10,11 @@ import {ItemService} from "../item.service";
 export class ItemGalleryComponent implements OnInit {
 
   items : Item[] = []
+  searchText:string;
 
-  constructor(private itemService: ItemService) { }
+  constructor(private itemService: ItemService) {
+    this.searchText = "";
+  }
 
   ngOnInit(): void {
     this.getItems();
@@ -19,6 +22,10 @@ export class ItemGalleryComponent implements OnInit {
 
   getItems():void{
     this.itemService.getItems().subscribe(items => this.items = items)
+  }
+
+  onFilterItemsByName(event:Event){
+    this.searchText = (<HTMLInputElement>event.target).value;
   }
 
 }
