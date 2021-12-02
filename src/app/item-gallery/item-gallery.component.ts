@@ -11,7 +11,6 @@ export class ItemGalleryComponent implements OnInit {
 
   items : Item[] = []
 
-
   constructor(private itemService: ItemService) { }
 
   ngOnInit(): void {

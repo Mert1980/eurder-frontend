@@ -6,11 +6,13 @@ import {LayoutModule} from "./layout/layout.module";
 import { ItemGalleryComponent } from './item-gallery/item-gallery.component';
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
+import { ItemComponent } from './item/item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ItemGalleryComponent,
+    ItemComponent,
   ],
   imports: [
     BrowserModule,
