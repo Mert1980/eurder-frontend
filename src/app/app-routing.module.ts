@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import {ItemGalleryComponent} from "./item-gallery/item-gallery.component";
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path: '', component: ItemGalleryComponent},
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
