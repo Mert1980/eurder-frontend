@@ -30,4 +30,8 @@ export class ItemService {
 
     return this.http.get<Item[]>(`${this.url}/`)
   }
+
+  addItem(item:Item): Observable<Item>{
+    return this.http.post<Item>(this.url, item);
+  }
 }

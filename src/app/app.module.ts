@@ -5,10 +5,11 @@ import { AppComponent } from './app.component';
 import {LayoutModule} from "./layout/layout.module";
 import { ItemGalleryComponent } from './item-gallery/item-gallery.component';
 import {HttpClientModule} from "@angular/common/http";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { ItemComponent } from './item/item.component';
 import { SearchItemComponent } from './search-item/search-item.component';
 import {NameFilterPipe} from "./pipe/name-filter.pipe";
+import { AddItemComponent } from './add-item/add-item.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +18,14 @@ import {NameFilterPipe} from "./pipe/name-filter.pipe";
     ItemComponent,
     SearchItemComponent,
     NameFilterPipe,
+    AddItemComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     LayoutModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [],

@@ -10,6 +10,8 @@
                  placeholder="Name"
                  [(ngModel)]="searchText"
           >
+            <a routerLink="/items/add"
+            >Add Item</a>
         </div>
         <div *ngFor="let item of items | nameFilter : searchText" class="">
           <app-item [item]="item"></app-item>
