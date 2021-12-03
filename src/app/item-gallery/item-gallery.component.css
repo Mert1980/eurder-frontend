@@ -1,8 +1,3 @@
-.item-gallery{
-  display: flex;
-  flex-direction: column;
-}
-
 .item-container{
   display: flex;
   flex-direction: column;
@@ -15,11 +10,29 @@
   border-bottom-width: medium;
   border-top-width: thin;
   display: flex;
-  align-items: stretch;
+  align-items: baseline;
+  flex-direction: row;
 }
 
-.item-list{
+.search-item-group{
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  align-items: center;
 }
+
+.create-item-link a{
+  display: contents;
+  color: darkblue;
+  font-weight: bold;
+  font-size: large;
+  align-self: flex-end;
+}
+
+.search-label p{
+  display: contents;
+  color: darkblue;
+  font-weight: bold;
+  font-size: large;
+
+}
+
