@@ -11,10 +11,10 @@ import { SearchItemComponent } from './search-item/search-item.component';
 import {NameFilterPipe} from "./pipe/name-filter.pipe";
 import { AddItemComponent } from './add-item/add-item.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatSliderModule} from "@angular/material/slider";
 import {MatCardModule} from "@angular/material/card";
 import { ItemDetailComponent } from './item-detail/item-detail.component';
 import {MatListModule} from "@angular/material/list";
+import {StockUrgencyPipe} from "./pipe/stock-urgency.pipe";
 
 @NgModule({
   declarations: [
@@ -23,6 +23,7 @@ import {MatListModule} from "@angular/material/list";
     ItemComponent,
     SearchItemComponent,
     NameFilterPipe,
+    StockUrgencyPipe,
     AddItemComponent,
     ItemDetailComponent,
   ],

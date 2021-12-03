@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {Item} from "../model/Item";
 import { ActivatedRoute, Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-item',
   templateUrl: './item.component.html',

@@ -12,6 +12,7 @@
   display: flex;
   align-items: baseline;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .search-item-group{
@@ -28,11 +29,19 @@
   align-self: flex-end;
 }
 
+.search-label{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .search-label p{
   display: contents;
   color: darkblue;
   font-weight: bold;
   font-size: large;
+}
 
+.create-item-link{
+  padding-right: 40px;
 }
 
