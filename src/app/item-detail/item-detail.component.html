@@ -1,0 +1,21 @@
+<h2>Item: {{selectedId}}</h2>
+<div class="item-detail-container">
+  <div class="mat-app-background">
+    <form (ngSubmit)="onSubmit()" [formGroup]="updateItemForm">
+      <label>Name</label>
+      <input formControlName="name">
+      <label>Description</label>
+      <input formControlName="description">
+      <label>Price</label>
+      <input formControlName="price">
+      <label>Amount of Stock</label>
+      <input formControlName="amountOfStock">
+      <button class="mat-button" type="submit">Save</button>
+    </form>
+  </div>
+  <div class="button-group">
+    <button class="mat-button" (click)="goBack()">Back</button>
+  </div>
+</div>
+
+
