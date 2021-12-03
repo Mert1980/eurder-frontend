@@ -1,4 +1,14 @@
-<header class="colored-background header">
-  <img class="logo" src="assets/images/logo.png">
-  {{title}}
-</header>
+<mat-toolbar color="primary" class="navbar">
+  <div class="logo-title">
+    <img class="logo" src="assets/images/logo.png">
+    <h2>{{title}}</h2>
+  </div>
+  <div>
+    <a routerLink="/items/add"
+    >Items</a>
+    <a>Customers</a>
+    <a>Orders</a>
+  </div>
+</mat-toolbar>
+
+

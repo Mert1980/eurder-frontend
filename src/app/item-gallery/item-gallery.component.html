@@ -1,23 +1,23 @@
-<div class="">
-  <div class="">
-    <div id="" class="">
-      <div class="">
-        <div class="">
-          <label for="name">Items</label>
-          <input id="name"
-                 name="name"
-                 class="form-control"
-                 placeholder="Name"
-                 [(ngModel)]="searchText"
-          >
-            <a routerLink="/items/add"
-            >Add Item</a>
-        </div>
-        <div *ngFor="let item of items | nameFilter : searchText" class="">
-          <app-item [item]="item"></app-item>
-        </div>
-      </div>
+<div class="item-container">
+  <div class="item-input-container">
+    <div>
+      <label for="name">Items</label>
+    </div>
+    <div>
+      <input id="name"
+             name="name"
+             class="form-control"
+             placeholder="Name"
+             [(ngModel)]="searchText"
+      >
+    </div>
+
+  </div>
+  <div class="item-list">
+    <div *ngFor="let item of items | nameFilter : searchText" >
+      <app-item [item]="item"></app-item>
     </div>
   </div>
 </div>
+
 

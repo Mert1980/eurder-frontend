@@ -10,6 +10,11 @@ import { ItemComponent } from './item/item.component';
 import { SearchItemComponent } from './search-item/search-item.component';
 import {NameFilterPipe} from "./pipe/name-filter.pipe";
 import { AddItemComponent } from './add-item/add-item.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSliderModule} from "@angular/material/slider";
+import {MatCardModule} from "@angular/material/card";
+import { ItemDetailComponent } from './item-detail/item-detail.component';
+import {MatListModule} from "@angular/material/list";
 
 @NgModule({
   declarations: [
@@ -19,6 +24,7 @@ import { AddItemComponent } from './add-item/add-item.component';
     SearchItemComponent,
     NameFilterPipe,
     AddItemComponent,
+    ItemDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,7 +32,10 @@ import { AddItemComponent } from './add-item/add-item.component';
     LayoutModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatListModule
   ],
   providers: [],
   exports: [

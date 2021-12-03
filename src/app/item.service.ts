@@ -13,6 +13,10 @@ export class ItemService {
 
   private url = `${environment.backendUrl}/items`
 
+  httpOptions = {
+    headers: new HttpHeaders({'Content-Type': 'application/json'})
+  };
+
   constructor(private http: HttpClient) {
   }
 
@@ -33,5 +37,14 @@ export class ItemService {
 
   addItem(item:Item): Observable<Item>{
     return this.http.post<Item>(this.url, item);
+  }
+
+  getItem(id : string | null): Observable<Item>{
+    return this.http.get<Item>(`${this.url}/${id}`)
+  }
+
+  updateItem(item: Item, id: string): Observable<any> {
+    console.log("id:" + id)
+    return this.http.put(`${this.url}/${id}`, item, this.httpOptions);
   }
 }

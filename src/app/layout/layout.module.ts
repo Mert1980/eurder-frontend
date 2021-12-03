@@ -5,6 +5,7 @@ import { FooterComponent } from './footer/footer.component';
 import { LayoutComponent } from './layout.component';
 import {ItemGalleryComponent} from "../item-gallery/item-gallery.component";
 import {RouterModule} from "@angular/router";
+import {MatToolbarModule} from "@angular/material/toolbar";
 
 
 
@@ -17,9 +18,10 @@ import {RouterModule} from "@angular/router";
   exports: [
     LayoutComponent
   ],
-  imports: [
-    CommonModule,
-    RouterModule
-  ]
+    imports: [
+        CommonModule,
+        RouterModule,
+        MatToolbarModule
+    ]
 })
 export class LayoutModule { }

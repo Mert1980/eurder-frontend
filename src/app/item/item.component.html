@@ -1,7 +1,10 @@
-<img class="" [src]="">
-<div class="">
-  <img src="favicon.ico">
-  <p class="">{{item.name}}</p>
-  <p class="">{{item.price}}</p>
-  <p class="">{{item.stockUrgency}}</p>
-</div>
+<mat-card class="item-card" (click)="goToItemDetail(item)">
+  <mat-card-title-group>
+    <mat-card-title>{{item.name}}</mat-card-title>
+    <mat-card-subtitle>{{item.price}}</mat-card-subtitle>
+    <img mat-card-xl-image src="/assets/images/emptybox.jpg" >
+  </mat-card-title-group>
+  <mat-card-content>
+    {{item.description}}
+  </mat-card-content>
+</mat-card>

@@ -22,7 +22,6 @@ export class AddItemComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
   onSubmit(): void{
     this.itemService.addItem(this.createItemForm.value)
       .subscribe(data => {
@@ -31,6 +30,7 @@ export class AddItemComponent implements OnInit {
         this.itemService.getItems();
       })
   }
+
 
   goBack() {
     this.location.back();
