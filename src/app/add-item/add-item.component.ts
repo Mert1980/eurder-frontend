@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, NgForm } from '@angular/forms';
 import {ItemService} from "../item.service";
 import { Location } from '@angular/common';
 
@@ -10,23 +10,15 @@ import { Location } from '@angular/common';
 })
 export class AddItemComponent implements OnInit {
 
-  createItemForm = this.formBuilder.group({
-    name:'',
-    description:'',
-    price:'',
-    amountOfStock:'',
-    stockUrgency:''
-  })
-
   constructor(private itemService: ItemService, private formBuilder: FormBuilder, private location:Location) { }
 
   ngOnInit(): void {
   }
-  onSubmit(): void{
-    this.itemService.addItem(this.createItemForm.value)
+  onSubmit(form: NgForm): void{
+    this.itemService.addItem(form.value)
       .subscribe(data => {
         console.log(data);
-        this.createItemForm.reset();
+        form.reset();
         this.itemService.getItems();
       })
   }
@@ -36,7 +28,7 @@ export class AddItemComponent implements OnInit {
     this.location.back();
   }
 
-  cancel() {
-    this.createItemForm.reset();
+  cancel(form: NgForm) {
+    form.reset();
   }
 }
