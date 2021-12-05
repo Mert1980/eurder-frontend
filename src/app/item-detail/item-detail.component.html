@@ -3,13 +3,18 @@
   <div class="mat-app-background">
     <form (ngSubmit)="onSubmit()" [formGroup]="updateItemForm">
       <label>Name</label>
-      <input formControlName="name">
+      <input [(ngModel)]="selectedItem.name" formControlName="name">
       <label>Description</label>
-      <input formControlName="description">
+      <textarea  [(ngModel)]="selectedItem.description"
+      formControlName="description"
+      rows="5"
+      maxlength="250"
+      >
+      </textarea>
       <label>Price</label>
-      <input formControlName="price">
+      <input  [(ngModel)]="selectedItem.price"  formControlName="price">
       <label>Amount of Stock</label>
-      <input formControlName="amountOfStock">
+      <input  [(ngModel)]="selectedItem.amountOfStock"  formControlName="amountOfStock">
       <button class="mat-button" type="submit">Save</button>
     </form>
   </div>
